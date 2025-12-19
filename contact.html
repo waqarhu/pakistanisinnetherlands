@@ -39,9 +39,22 @@
   * Based on ZenBlog Bootstrap Template
   * Updated: Dec 19 2025
   ======================================================== -->
+  
+  <!-- Google Analytics (Replace G-XXXXXXXXXX with your actual Measurement ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 
 <body class="contact-page">
+
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link visually-hidden" tabindex="1">Skip to main content</a>
+
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -52,7 +65,7 @@
         <h1 class="sitename">Pakistanis in Netherlands</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -72,16 +85,16 @@
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="twitter" aria-label="Follow us on Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook" aria-label="Follow us on Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram" aria-label="Follow us on Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" aria-label="Connect on LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
   </header>
 
-  <main class="main">
+  <main id="main-content" class="main" role="main">
 
     <!-- Page Title -->
     <div class="page-title">
@@ -135,23 +148,23 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" aria-label="Your name" required="">
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" aria-label="Your email address" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" aria-label="Message subject" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" aria-label="Your message" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -269,6 +282,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

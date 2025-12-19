@@ -35,6 +35,10 @@
 
 <body class="single-post-page">
 
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link visually-hidden" tabindex="1">Skip to main content</a>
+
+
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
@@ -44,7 +48,7 @@
         <h1 class="sitename">Pakistanis in Netherlands</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -64,16 +68,16 @@
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="twitter" aria-label="Follow us on Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook" aria-label="Follow us on Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram" aria-label="Follow us on Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" aria-label="Connect on LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
   </header>
 
-  <main class="main">
+  <main id="main-content" class="main" role="main">
 
     <!-- Page Title -->
     <div class="page-title">
@@ -341,7 +345,7 @@
 
               <h3 class="widget-title">Search</h3>
               <form action="">
-                <input type="text">
+                <input type="text" name="q" placeholder="Search..." aria-label="Search query">
                 <button type="submit" title="Search"><i class="bi bi-search"></i></button>
               </form>
 
@@ -518,6 +522,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

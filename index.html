@@ -46,6 +46,16 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  
+  <!-- Google Analytics (Replace GA_MEASUREMENT_ID with your actual ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
   
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -95,9 +105,21 @@
   * Based on ZenBlog Bootstrap Template
   * Updated: Dec 19 2025
   ======================================================== -->
+  
+  <!-- Google Analytics (Replace GA_MEASUREMENT_ID with your actual ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 
 <body class="index-page">
+
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='static';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-10000px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -108,8 +130,8 @@
         <h1 class="sitename">Pakistanis in Netherlands</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
+      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
+        <ul role="menubar">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="single-post.html">Single Post</a></li>
@@ -128,16 +150,16 @@
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="twitter" aria-label="Follow us on Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook" aria-label="Follow us on Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram" aria-label="Follow us on Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" aria-label="Connect on LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
   </header>
 
-  <main class="main">
+  <main id="main-content" class="main" role="main">
 
     <!-- Slider Section -->
     <section id="slider" class="slider section dark-background">
@@ -661,6 +683,25 @@
 
   </main>
 
+  <!-- Newsletter Section -->
+  <section class="newsletter-section" style="background-color: #e0f7e9; padding: 60px 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 style="margin-bottom: 20px;">Stay Connected with Our Community</h2>
+          <p style="margin-bottom: 30px; font-size: 18px;">Get the latest updates on events, resources, and news for Pakistani expats in Netherlands.</p>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="newsletter-form" style="max-width: 600px; margin: 0 auto;">
+            <div class="input-group">
+              <input type="email" name="email" class="form-control" placeholder="Enter your email address" required aria-label="Email address" style="padding: 15px; border-radius: 5px 0 0 5px;">
+              <button type="submit" class="btn" style="background-color: #00664f; color: white; padding: 15px 30px; border: none; border-radius: 0 5px 5px 0; cursor: pointer;">Subscribe</button>
+            </div>
+            <small style="display: block; margin-top: 10px; color: #666;">We respect your privacy. Unsubscribe anytime.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer id="footer" class="footer dark-background">
 
     <div class="container footer-top">
@@ -757,6 +798,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

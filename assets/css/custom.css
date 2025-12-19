@@ -1,0 +1,124 @@
+/* Newsletter Section */
+.newsletter-section {
+  background: linear-gradient(135deg, #e0f7e9 0%, #c8f0db 100%);
+  padding: 60px 0;
+}
+
+.newsletter-section h2 {
+  color: #00664f;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.newsletter-section p {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.newsletter-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-form .input-group {
+  display: flex;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #00664f;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: #004d3a;
+}
+
+.newsletter-form button {
+  background-color: #00664f;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #004d3a;
+}
+
+.newsletter-form small {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: #00664f;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+/* Improved focus states for accessibility */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: 3px solid #00664f;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .newsletter-form button {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .newsletter-section,
+  .header-social-links,
+  .skip-link {
+    display: none !important;
+  }
+}
