@@ -164,3 +164,29 @@ document.querySelectorAll('a[href^="http"]').forEach(link => {
     });
   }
 });
+
+// Handle placeholder links (social media, etc.)
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all links that point to "#" 
+  const placeholderLinks = document.querySelectorAll('a[href="#"]');
+  
+  placeholderLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Check if it's a social media link
+      const isSocialLink = this.classList.contains('twitter') || 
+                          this.classList.contains('facebook') || 
+                          this.classList.contains('instagram') || 
+                          this.classList.contains('linkedin');
+      
+      if (isSocialLink) {
+        // Show a friendly message for social media links
+        alert('Our social media pages are coming soon! Follow us to stay updated with the Pakistani community in Netherlands.');
+      } else {
+        // For other placeholder links, show generic message
+        alert('This section is under construction. Please check back soon!');
+      }
+    });
+  });
+});

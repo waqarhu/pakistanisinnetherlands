@@ -1,9 +1,15 @@
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
 # Enable HTTPS redirect (when not on localhost)
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} !^localhost
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect blog-details.html to 404 page (temporary redirect)
+RewriteRule ^blog-details\.html$ /404.html [L,R=302]
 </IfModule>
 
 # Enable compression
