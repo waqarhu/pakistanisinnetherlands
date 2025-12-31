@@ -17,22 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize interactive map
   initializePopulationMap();
   
-  // Performance monitoring
-  if (window.performance && console.log) {
-    // Log page load performance
+  // Performance monitoring (silent - only track, don't log)
+  if (window.performance) {
     window.addEventListener('load', function() {
       setTimeout(function() {
         const perfData = window.performance.timing;
         const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-        const connectTime = perfData.responseEnd - perfData.requestStart;
-        const renderTime = perfData.domComplete - perfData.domLoading;
-        
-        console.log('Performance Metrics:');
-        console.log('Page Load Time: ' + pageLoadTime + 'ms');
-        console.log('Connect Time: ' + connectTime + 'ms');
-        console.log('Render Time: ' + renderTime + 'ms');
+        // Store metrics silently for analytics if needed
+        window.sitePerformance = {
+          pageLoad: pageLoadTime,
+          connect: perfData.responseEnd - perfData.requestStart,
+          render: perfData.domComplete - perfData.domLoading
+        };
       }, 0);
-    });
+    }, { once: true });
   }
 });
 
