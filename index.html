@@ -319,182 +319,143 @@
     </section><!-- /99 Names of Allah Slider Section -->
 
     <!-- Population Counter & Map Section -->
-    <section id="population-counter" class="population-counter section" style="background: linear-gradient(135deg, #e0f7e9 0%, #c8f0db 100%); padding: 60px 0;">
+    <section id="population-counter" class="population-counter section" style="background: linear-gradient(135deg, #e0f7e9 0%, #c8f0db 100%); padding: 80px 0; position: relative; overflow: hidden;">
       <div class="container">
-        <div class="row align-items-center">
-          <!-- Counter Column -->
-          <div class="col-lg-5 text-center" data-aos="fade-right">
-            <h2 style="color: #00664f; font-size: 2rem; margin-bottom: 1rem;">
-              <i class="bi bi-people-fill"></i> Pakistanis in Netherlands
-            </h2>
-            <div style="font-size: 4.5rem; font-weight: 700; color: #004d29; margin: 1.5rem 0;">
-              <span id="pakistani-counter">0</span>+
+        <!-- Counter in Center -->
+        <div class="text-center mb-5" data-aos="zoom-in">
+          <h2 style="color: #00664f; font-size: 2rem; margin-bottom: 1rem;">
+            <i class="bi bi-people-fill"></i> Pakistanis in Netherlands
+          </h2>
+          <div style="font-size: 5rem; font-weight: 700; color: #004d29; margin: 1.5rem 0;">
+            <span id="pakistani-counter">0</span>+
+          </div>
+          <p style="color: #333; font-size: 1.1rem; margin-bottom: 0;">
+            Growing community | Updated monthly
+          </p>
+        </div>
+
+        <!-- Floating City Bubbles -->
+        <div style="position: relative; min-height: 500px; margin-top: 3rem;">
+          <!-- Amsterdam - Top Left -->
+          <div class="city-bubble" style="position: absolute; top: 0; left: 5%; animation: float 3s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="100">
+            <div style="width: 140px; height: 140px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 28px; color: #00a859; margin-bottom: 8px;"></i>
+              <h6 style="margin: 0; font-size: 0.9rem; font-weight: 700; color: #00664f;">Amsterdam</h6>
+              <p style="margin: 0; font-size: 0.75rem; color: #666;">13,500</p>
             </div>
-            <p style="color: #333; font-size: 1.1rem; margin-bottom: 0;">
-              Growing community | Updated monthly
-            </p>
           </div>
 
-          <!-- Cities List Column -->
-          <div class="col-lg-7" data-aos="fade-left">
-            <div style="background-color: rgba(255,255,255,0.8); padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-              <h4 class="text-center mb-4" style="color: #00a859;"><i class="bi bi-geo-alt-fill"></i> Major Communities</h4>
-              
-              <div class="row g-3">
-                <!-- Amsterdam -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Amsterdam</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~13,500 residents</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- Rotterdam - Top Right -->
+          <div class="city-bubble" style="position: absolute; top: 20px; right: 10%; animation: float 3.5s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="200">
+            <div style="width: 130px; height: 130px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 26px; color: #00a859; margin-bottom: 8px;"></i>
+              <h6 style="margin: 0; font-size: 0.85rem; font-weight: 700; color: #00664f;">Rotterdam</h6>
+              <p style="margin: 0; font-size: 0.7rem; color: #666;">11,000</p>
+            </div>
+          </div>
 
-                <!-- Rotterdam -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Rotterdam</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~11,000 residents</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- The Hague - Middle Left -->
+          <div class="city-bubble" style="position: absolute; top: 150px; left: 15%; animation: float 4s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="300">
+            <div style="width: 120px; height: 120px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 24px; color: #00a859; margin-bottom: 8px;"></i>
+              <h6 style="margin: 0; font-size: 0.8rem; font-weight: 700; color: #00664f;">The Hague</h6>
+              <p style="margin: 0; font-size: 0.7rem; color: #666;">9,000</p>
+            </div>
+          </div>
 
-                <!-- The Hague -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">The Hague</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~9,000 residents</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- Utrecht - Middle Right -->
+          <div class="city-bubble" style="position: absolute; top: 170px; right: 18%; animation: float 3.8s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="400">
+            <div style="width: 115px; height: 115px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 23px; color: #00a859; margin-bottom: 8px;"></i>
+              <h6 style="margin: 0; font-size: 0.8rem; font-weight: 700; color: #00664f;">Utrecht</h6>
+              <p style="margin: 0; font-size: 0.7rem; color: #666;">7,000</p>
+            </div>
+          </div>
 
-                <!-- Utrecht -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Utrecht</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~7,000 residents</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- Almere - Bottom Left -->
+          <div class="city-bubble" style="position: absolute; bottom: 80px; left: 8%; animation: float 3.3s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="500">
+            <div style="width: 105px; height: 105px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 22px; color: #00a859; margin-bottom: 6px;"></i>
+              <h6 style="margin: 0; font-size: 0.75rem; font-weight: 700; color: #00664f;">Almere</h6>
+              <p style="margin: 0; font-size: 0.65rem; color: #666;">5,500</p>
+            </div>
+          </div>
 
-                <!-- Almere -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Almere</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~5,500 residents</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- Eindhoven - Bottom Right -->
+          <div class="city-bubble" style="position: absolute; bottom: 60px; right: 12%; animation: float 4.2s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="600">
+            <div style="width: 100px; height: 100px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 21px; color: #00a859; margin-bottom: 6px;"></i>
+              <h6 style="margin: 0; font-size: 0.75rem; font-weight: 700; color: #00664f;">Eindhoven</h6>
+              <p style="margin: 0; font-size: 0.65rem; color: #666;">4,500</p>
+            </div>
+          </div>
 
-                <!-- Eindhoven -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Eindhoven</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~4,500 residents</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- Haarlem - Top Center -->
+          <div class="city-bubble" style="position: absolute; top: 40px; left: 42%; animation: float 3.6s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="700">
+            <div style="width: 95px; height: 95px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 20px; color: #00a859; margin-bottom: 5px;"></i>
+              <h6 style="margin: 0; font-size: 0.7rem; font-weight: 700; color: #00664f;">Haarlem</h6>
+              <p style="margin: 0; font-size: 0.6rem; color: #666;">3,000</p>
+            </div>
+          </div>
 
-                <!-- Haarlem -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Haarlem</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~3,000 residents</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- Groningen - Far Top Right -->
+          <div class="city-bubble" style="position: absolute; top: -10px; right: 25%; animation: float 4.5s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="800">
+            <div style="width: 90px; height: 90px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 19px; color: #00a859; margin-bottom: 5px;"></i>
+              <h6 style="margin: 0; font-size: 0.7rem; font-weight: 700; color: #00664f;">Groningen</h6>
+              <p style="margin: 0; font-size: 0.6rem; color: #666;">2,500</p>
+            </div>
+          </div>
 
-                <!-- Groningen -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Groningen</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~2,500 residents</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- Leiden - Bottom Center Left -->
+          <div class="city-bubble" style="position: absolute; bottom: 120px; left: 32%; animation: float 3.7s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="900">
+            <div style="width: 85px; height: 85px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 18px; color: #00a859; margin-bottom: 5px;"></i>
+              <h6 style="margin: 0; font-size: 0.65rem; font-weight: 700; color: #00664f;">Leiden</h6>
+              <p style="margin: 0; font-size: 0.6rem; color: #666;">2,000</p>
+            </div>
+          </div>
 
-                <!-- Leiden -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Leiden</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~2,000 residents</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Hoofddorp -->
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center p-3" style="background-color: rgba(255,255,255,0.7); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,168,89,0.2);">
-                    <div class="flex-shrink-0">
-                      <div style="width: 50px; height: 50px; background-color: #00a859; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-building" style="font-size: 24px; color: white;"></i>
-                      </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-0 fw-bold" style="color: #00664f;">Hoofddorp</h6>
-                      <p class="mb-0" style="font-size: 0.9rem; color: #666;">~1,800 residents</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <!-- Hoofddorp - Bottom Center Right -->
+          <div class="city-bubble" style="position: absolute; bottom: 100px; right: 35%; animation: float 4.1s ease-in-out infinite;" data-aos="fade-up" data-aos-delay="1000">
+            <div style="width: 80px; height: 80px; background-color: rgba(255,255,255,0.7); border: 2px solid rgba(0,168,89,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+              <i class="bi bi-building" style="font-size: 17px; color: #00a859; margin-bottom: 4px;"></i>
+              <h6 style="margin: 0; font-size: 0.65rem; font-weight: 700; color: #00664f;">Hoofddorp</h6>
+              <p style="margin: 0; font-size: 0.55rem; color: #666;">1,800</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Floating Animation CSS -->
+      <style>
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        .city-bubble {
+          transition: transform 0.3s ease;
+        }
+        
+        .city-bubble:hover {
+          transform: scale(1.1) !important;
+          z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+          .city-bubble {
+            position: relative !important;
+            display: inline-block;
+            margin: 10px;
+            top: auto !important;
+            left: auto !important;
+            right: auto !important;
+            bottom: auto !important;
+          }
+        }
+      </style>
     </section><!-- /Population Counter & Map Section -->
 
     <!-- WhatsApp Community Section -->
