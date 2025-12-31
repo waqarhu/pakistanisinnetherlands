@@ -37,7 +37,7 @@ function performSearch(query) {
 function addWhatsAppButton() {
   // Add floating WhatsApp contact button
   const whatsappBtn = document.createElement('a');
-  whatsappBtn.href = 'https://wa.me/31612345678'; // Replace with actual WhatsApp number
+  whatsappBtn.href = 'https://wa.me/31684346334'; // Waqar Hussain WhatsApp
   whatsappBtn.target = '_blank';
   whatsappBtn.rel = 'noopener noreferrer';
   whatsappBtn.className = 'whatsapp-float';
