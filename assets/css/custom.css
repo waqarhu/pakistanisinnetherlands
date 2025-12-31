@@ -105,12 +105,49 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
   }
 }
 
+/* Population Map Styles */
+.population-map .city-marker {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.population-map .city-marker:hover circle:first-child {
+  fill: #006837;
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.population-map .city-marker:hover text {
+  font-weight: 700;
+}
+
+.population-map .city-marker circle {
+  transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.population-map .city-marker circle:first-child {
+  animation: pulse 2s infinite;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  
+  .population-map .city-marker circle:first-child {
+    animation: none !important;
   }
 }
 

@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Pakistani population counter with monthly auto-update
   initializePakistaniCounter();
   
+  // Initialize interactive map
+  initializePopulationMap();
+  
   // Performance monitoring
   if (window.performance && console.log) {
     // Log page load performance
@@ -271,4 +274,23 @@ function initializePakistaniCounter() {
   }, { threshold: 0.5 });
   
   observer.observe(counterElement);
+}
+
+// Interactive Population Map
+function initializePopulationMap() {
+  const cityMarkers = document.querySelectorAll('.city-marker');
+  
+  cityMarkers.forEach(marker => {
+    marker.addEventListener('click', function() {
+      const city = this.getAttribute('data-city');
+      const population = this.getAttribute('data-population');
+      
+      alert(`${city}\n\nEstimated Pakistani Population: ${parseInt(population).toLocaleString()}\n\nOne of the major hubs for the Pakistani community in Netherlands with mosques, halal restaurants, and Pakistani grocery stores.`);
+    });
+    
+    // Add hover effect info
+    marker.addEventListener('mouseenter', function() {
+      this.style.cursor = 'pointer';
+    });
+  });
 }
