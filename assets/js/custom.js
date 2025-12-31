@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // WhatsApp contact button (floating)
   addWhatsAppButton();
   
+  // Pakistani population counter with monthly auto-update
+  initializePakistaniCounter();
+  
   // Performance monitoring
   if (window.performance && console.log) {
     // Log page load performance
@@ -208,3 +211,64 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Pakistani Population Counter with Monthly Auto-Update
+function initializePakistaniCounter() {
+  const counterElement = document.getElementById('pakistani-counter');
+  if (!counterElement) return;
+  
+  // Base population as of January 2024
+  const basePopulation = 55000;
+  const baseYear = 2024;
+  const baseMonth = 1; // January
+  
+  // Average monthly growth (estimated 0.8% per month = ~10% yearly)
+  const monthlyGrowthRate = 0.008;
+  
+  // Calculate current population based on months passed
+  function calculateCurrentPopulation() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth() + 1; // 0-11 -> 1-12
+    
+    // Calculate months passed since base date
+    const monthsPassed = (currentYear - baseYear) * 12 + (currentMonth - baseMonth);
+    
+    // Calculate population with compound growth
+    const currentPopulation = Math.round(basePopulation * Math.pow(1 + monthlyGrowthRate, monthsPassed));
+    
+    return currentPopulation;
+  }
+  
+  // Animate counter from 0 to target value
+  function animateCounter(target) {
+    let current = 0;
+    const increment = Math.ceil(target / 100);
+    const duration = 2000; // 2 seconds
+    const stepTime = duration / (target / increment);
+    
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      counterElement.textContent = current.toLocaleString('en-US');
+    }, stepTime);
+  }
+  
+  // Initialize counter
+  const currentPopulation = calculateCurrentPopulation();
+  
+  // Check if counter is visible, then animate
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && counterElement.textContent === '0') {
+        animateCounter(currentPopulation);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  observer.observe(counterElement);
+}
