@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     performSearch(searchQuery);
   }
   
-  // WhatsApp contact button (floating)
-  addWhatsAppButton();
+  // Floating request forms for community group access
+  addGroupRequestLinks();
   
   // Pakistani population counter with monthly auto-update
   initializePakistaniCounter();
@@ -56,56 +56,69 @@ function performSearch(query) {
   }
 }
 
-function addWhatsAppButton() {
-  // Add floating WhatsApp contact button
-  const whatsappBtn = document.createElement('a');
-  whatsappBtn.href = 'https://wa.me/31684346334'; // Waqar Hussain WhatsApp
-  whatsappBtn.target = '_blank';
-  whatsappBtn.rel = 'noopener noreferrer';
-  whatsappBtn.className = 'whatsapp-float';
-  whatsappBtn.innerHTML = '<i class="bi bi-whatsapp"></i>';
-  whatsappBtn.setAttribute('aria-label', 'Contact us on WhatsApp');
-  whatsappBtn.title = 'Chat with us on WhatsApp';
-  
-  // Add CSS for WhatsApp button
+function addGroupRequestLinks() {
+  const linksWrapper = document.createElement('div');
+  linksWrapper.className = 'group-request-float';
+  linksWrapper.setAttribute('aria-label', 'Community group request forms');
+
+  linksWrapper.innerHTML = `
+    <p class="group-request-title mb-2"><i class="bi bi-people"></i> Request Group Join</p>
+    <a href="https://forms.gle/Ls4Tfb7eS9sNbuWf7" target="_blank" rel="noopener noreferrer" class="group-request-link">IT Group</a>
+    <a href="https://forms.gle/tUGJHEeGKrA77j4a8" target="_blank" rel="noopener noreferrer" class="group-request-link">Students Group</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdx5BfcFroE6vaHB1AFJQ9KIUigVia8_KJqgHuQvYRTb1MPUw/viewform" target="_blank" rel="noopener noreferrer" class="group-request-link">Pakistani in Netherlands</a>
+  `;
+
   const style = document.createElement('style');
   style.textContent = `
-    .whatsapp-float {
+    .group-request-float {
       position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 40px;
-      right: 40px;
-      background-color: #25d366;
-      color: #FFF;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      bottom: 24px;
+      right: 24px;
+      background: #ffffff;
+      border: 1px solid #dfe5eb;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
       z-index: 1000;
+      max-width: 240px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
+      flex-direction: column;
+      gap: 8px;
     }
-    .whatsapp-float:hover {
-      background-color: #128C7E;
-      transform: scale(1.1);
-      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    .group-request-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #212529;
+      margin: 0;
+    }
+    .group-request-link {
+      display: block;
+      text-decoration: none;
+      background: #00a859;
+      color: #fff;
+      padding: 8px 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+    .group-request-link:hover {
+      background: #008f4c;
+      color: #fff;
     }
     @media screen and (max-width: 768px) {
-      .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 25px;
+      .group-request-float {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        max-width: none;
       }
     }
   `;
-  
+
   document.head.appendChild(style);
-  document.body.appendChild(whatsappBtn);
+  document.body.appendChild(linksWrapper);
 }
 
 // Form submission handling with Formspree
